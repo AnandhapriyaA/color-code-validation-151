@@ -1,0 +1,21 @@
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+import java.util.Scanner;
+public class mains extends UserMainCode{
+public static void main(String []args){
+Scanner s =new Scanner(System.in);
+System.out.println("enter string");
+String word=s.nextLine();
+checkPattern(word);
+}}
+class UserMainCode{
+ static boolean checkPattern(String text){
+     Pattern pattern=Pattern.compile("[#]{1}[A-F0-9]{6}");
+     Matcher match=pattern.matcher(text);
+     boolean result=match.matches();
+     if(result==true)
+System.out.println("TRUE");
+else
+System.out.println("FALSE");
+    return result;
+ }}
